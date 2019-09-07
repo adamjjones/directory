@@ -16,25 +16,29 @@ const App = props => {
       `https://sdg-staff-directory-app.herokuapp.com/api/AdamsCoolCo/employees/`
     )
     setEmployees(response.data)
-    console.log(response.data)
+    console.log(employees)
   }
 
   const changeData = async () => {
     const response = await axios.post(
-      `https://sdg-staff-directory-app.herokuapp.com/api/AdamsCoolCo/employees/`
+      `https://sdg-staff-directory-app.herokuapp.com/api/AdamsCO/employees/`,
+      {
+        firstName: 'sup',
+        lastName: 'lastname'
+      }
     )
     console.log(response.data)
   }
 
   return (
     <Router>
-      <div>
-        <h1>Directory</h1>
-      </div>
+      <section className="front-header">
+        <span>Directory</span>
+      </section>
       <Switch>
-        <Employees employees={employees} />
-        <Link to="/"></Link>
+        <Employees />
       </Switch>
+      <footer>Made with &hearts; by Adam Jones</footer>
     </Router>
   )
 }

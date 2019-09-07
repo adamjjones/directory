@@ -9,4 +9,24 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+  background-color: rgb(139, 235, 139);
+}
+
+.front-header {
+  width: 100%;
+  text-align: center;
+  padding: 20px 20px 20px 20px;
+  background-color: rgb(91, 162, 255);
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+.nav {
+  padding: 20px 0px 20px 0px;
+  background-color: rgb(77, 240, 62);
+  text-align: center;
+}
+
+footer {
+  margin: 20px 0px 20px 0px;
 }
