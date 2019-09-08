@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
-import AddEmployee from '../components/AddEmployee'
+import EmployeeForm from '../components/EmployeeForm'
 import EmployeeDetails from './EmployeeDetails'
 
 const Employees = props => {
@@ -34,7 +34,7 @@ const Employees = props => {
             </table>
           </Route>
           <Route path="/employee/add" exact>
-            <AddEmployee {...props} />
+            <EmployeeForm {...props} />
           </Route>
           <Route
             path="/employee/:id"

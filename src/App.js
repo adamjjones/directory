@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { BrowserRouter as Router, Switch } from 'react-router-dom'
 import Employees from './components/Employees'
-// import AddEmployee from './components/AddEmployee'
+// import EmployeeForm from './components/EmployeeForm'
 
 const headers = {
   'Content-Type': 'application/json'

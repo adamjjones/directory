@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 // import App from '../App'
 // import Employees from './Employees'
 
-const AddEmployee = props => {
+const EmployeeForm = props => {
   let [newEmployee, setnewEmployee] = useState({})
   const eventHandler = event => {
     const id = event.target.id
@@ -55,4 +55,4 @@ const AddEmployee = props => {
     </div>
   )
 }
-export default AddEmployee
+export default EmployeeForm
