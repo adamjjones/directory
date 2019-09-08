@@ -1,27 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
+import Employees from './Employees'
 
 const EmployeeDetails = props => {
+  console.log(props)
   return (
     <div>
-      <p>This is the employee page</p>
-      <table>
-        <tbody>
-          {props.employees.map(e => {
-            return (
-              <tr key={e.id}>
-                <td>
-                  <Link to={`/employee/${e.id}`}>
-                    {e.firstName}&nbsp;
-                    {e.lastName}
-                  </Link>
-                </td>
-                <td>{e.lastName}</td>
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
+      <pre>{JSON.stringify(props.employee, '', 2)}</pre>
     </div>
   )
 }
