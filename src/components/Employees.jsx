@@ -34,17 +34,30 @@ const Employees = props => {
             </table>
           </Route>
           <Route path="/employee/add" exact>
-            <EmployeeForm {...props} />
+            <EmployeeForm {...props} mode="add" />
           </Route>
           <Route
-            path="/employee/:id"
+            path="/employee/:id/modify"
             render={cprops => {
               const employee = props.employees.filter(e => {
                 return e.id === parseInt(cprops.match.params.id)
               })
+              return <EmployeeForm {...props} mode="edit" />
+            }}
+          />
+
+          <Route
+            path="/employee/:id"
+            render={cprops => {
+              const id = parseInt(cprops.match.params.id)
+              const employees = props.employees.filter(e => {
+                return e.id === id
+              })
+              if (employees.length === 0)
+                return <div>Employee {id} not found</div>
               return (
                 <>
-                  <EmployeeDetails employee={employee} />
+                  <EmployeeDetails employee={employees[0]} />
                   {/* <pre>
                     {JSON.stringify(cprops, '', 2)}
                     {JSON.stringify(employee, '', 2)}

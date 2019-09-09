@@ -22,7 +22,6 @@ const App = props => {
   }
 
   const addData = async newEmployee => {
-    debugger
     console.log('addData was passed this', newEmployee)
     const response = await axios.post(
       `https://sdg-staff-directory-app.herokuapp.com/api/AdamsCoolCo/employees/`,

@@ -6,7 +6,11 @@ const EmployeeDetails = props => {
   console.log(props)
   return (
     <div>
-      <pre>{JSON.stringify(props.employee, '', 2)}</pre>
+      {/* <pre>{JSON.stringify(props.employee, '', 2)}</pre> */}
+      <p>{props.employee.firstName}</p>
+      <p>{props.employee.lastName}</p>
+      <p>{props.employee.id}</p>
+      <p>{props.employee.isFullTime}</p>
     </div>
   )
 }
